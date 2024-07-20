@@ -14,8 +14,6 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v4
 
-      - name: Log in to Docker Hub
-        run: echo "${{ secrets.DOCKERHUB_USERNAME }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
       - name: Pull Docker image
         run: docker pull mirotalk/p2p:latest
